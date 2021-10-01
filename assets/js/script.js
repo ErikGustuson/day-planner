@@ -8,3 +8,17 @@ function updateClock() {
 
 setInterval(updateClock, 1000);
 
+// TODO: color coded to indicate whether it is in the past, present, or future
+
+// TODO: when you click on the save button it should save text to local storage
+
+$(".activity") = var activity;
+
+$("btn").click(function save(event) {
+  var scheduledActivity = {
+    loggedActivity: activity.value.trim(),
+  };
+  localStorage.setItem("scheduledActivity", JSON.stringify(scheduledActivity));
+});
+
+// TODO: when you refresh the page the information should persist
