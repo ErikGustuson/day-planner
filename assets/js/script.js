@@ -51,13 +51,17 @@ var usersSchedule = [
 // TODO: when you click on the save button it should save text to local storage
 
 function saveText(){
-  localStorage.setItem("user activities", JSON.stringify(usersSchedule));
+  localStorage.setItem("user-activities", JSON.stringify(usersSchedule));
 }
 
-function saveOnClick(event) {
-  let btnClicked = $(event.target);
-
-
+function saveOnButton(event) {
+  let btnClick = $(event.target);
+  
+  let individualTextArea = btnClick.parent().parent().children(".activity");
+  let textContent = individualTextArea.val()
+  let hourContainer = btnClick.parent().parent().children('.hour').text();
+};
 
 
 // TODO: when you refresh the page the information should persist
+// 
