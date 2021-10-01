@@ -8,17 +8,56 @@ function updateClock() {
 
 setInterval(updateClock, 1000);
 
+var usersSchedule = [
+  {
+  timeSlot: "9",
+  text: "",
+  },
+  {
+  timeSlot: "10",
+  text: "",
+  },
+  {
+  timeSlot: "11",
+  text: "",
+  },
+  {
+  timeSlot: "12",
+  text: "",
+  },
+  {
+  timeSlot: "1",
+  text: "",
+  },
+  {
+  timeSlot: "2",
+  text: "",
+  },
+  {
+  timeSlot: "3",
+  text: "",
+  },
+  {
+  timeSlot: "4",
+  text: "",
+  },
+  {
+  timeSlot: "5",
+  text: "",
+  },]
+
 // TODO: color coded to indicate whether it is in the past, present, or future
 
 // TODO: when you click on the save button it should save text to local storage
 
-$(".activity") = var activity;
+function saveText(){
+  localStorage.setItem("user activities", JSON.stringify(usersSchedule));
+}
 
-$("btn").click(function save(event) {
-  var scheduledActivity = {
-    loggedActivity: activity.value.trim(),
-  };
-  localStorage.setItem("scheduledActivity", JSON.stringify(scheduledActivity));
-});
+function saveOnClick(event) {
+  let btnClicked = $(event.target);
+
+
+
 
 // TODO: when you refresh the page the information should persist
